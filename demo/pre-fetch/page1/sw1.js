@@ -4,9 +4,6 @@ self.addEventListener('install', function (event) {
     caches.open(cacheName).then(function (cache) {
       return cache.addAll([
         '/service-worker-slide/demo/pre-fetch/page1',
-        '/service-worker-slide/demo/pre-fetch/page2',
-        '/service-worker-slide/demo/pre-fetch/page1/',
-        '/service-worker-slide/demo/pre-fetch/page2/'
       ]);
     })
   );
