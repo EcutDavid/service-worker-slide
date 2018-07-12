@@ -49,26 +49,35 @@
 				<img src="./images/sw-2.png" alt="">
 			</section>
 			<section>
-        <p>The main thread</p>
-				<pre><code data-trim data-noescape>
-					 if ('serviceWorker' in navigator) {
-				     navigator.serviceWorker.register(${service-worker-path})
-					 }
-        </code></pre>
-        <p>Service worker</p>
-				<pre><code data-trim data-noescape>
-          self.addEventListener('install', function (event) {
-            event.waitUntil(
-              ...
-            )
-          })
+        <section>
+          <p>The main thread</p>
+          <pre><code data-trim data-noescape>
+            if ('serviceWorker' in navigator) {
+              navigator.serviceWorker.register(${service-worker-path})
+            }
+          </code></pre>
+        </section>
+        <section>
+            <p>Service worker</p>
+            <pre><code data-trim data-noescape>
+              self.addEventListener('install', function (event) {
+                event.waitUntil(
+                  ...
+                )
+              })
 
-          self.addEventListener('fetch', function (event) {
-            event.respondWith(
-              ...
-            )
-          })
-        </code></pre>
+              self.addEventListener('fetch', function (event) {
+                event.respondWith(
+                  ...
+                )
+              })
+
+              self.addEventListener('activate', function (event) {
+                ...
+              })
+
+            </code></pre>
+        </section>
 			</section>
       <section>
 					<h4>Service Worker Can Do Much More</h4>
