@@ -3,10 +3,10 @@ self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(cacheName).then(function (cache) {
       return cache.addAll([
-        '/demo/pre-fetch/page1',
-        '/demo/pre-fetch/page2',
-        '/demo/pre-fetch/page1/',
-        '/demo/pre-fetch/page2/'
+        '/service-worker-slide/demo/pre-fetch/page1',
+        '/service-worker-slide/demo/pre-fetch/page2',
+        '/service-worker-slide/demo/pre-fetch/page1/',
+        '/service-worker-slide/demo/pre-fetch/page2/'
       ]);
     })
   );
