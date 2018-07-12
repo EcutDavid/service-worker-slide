@@ -16,18 +16,90 @@
 			</section>
 			<section data-markdown>
 				<textarea data-template>
-					#### Why Play Dinosaur?
+					![](./images/more404.png)
+				</textarea>
+			</section>
+			<section data-markdown>
+				<textarea data-template>
+					#### Why Dinosaur?
 					![](./images/404.gif)
+				</textarea>
+      </section>
+      <section>
+        <h4>DEMO 1</h4>
+        <a href="https://davidguan.me/demo/canva-offline/" target="_blank">davidguan.me/demo/canva-offline</a>
+      </section>
+			<section data-markdown>
+				<textarea data-template>
+					#### Without Service Worker & Good Network
+					![](./images/no-sw-0.png)
+				</textarea>
+			</section>
+			<section data-markdown>
+				<textarea data-template>
+					 #### Without Service Worker & Network Down
+					 ![](./images/no-sw-1.png)
+				</textarea>
+			</section>
+			<section data-markdown>
+				<textarea data-template>
+					 #### With Service Worker & Good Network
+					 ![](./images/sw-0.png)
+				</textarea>
+			</section>
+			<section data-markdown>
+				<textarea data-template>
+					#### With Service Worker & Network Down & No Code in Service Worker
+					![](./images/sw-1.png)
+				</textarea>
+			</section>
+			<section data-markdown>
+				<textarea data-template>
+					#### With Service Worker & Network Down
+					![](./images/sw-2.png)
 				</textarea>
 			</section>
 			<section>
-				<h2>Service Worker</h2>
-			</section>
-			<section>
+        <p>The main thread</p>
 				<pre><code data-trim data-noescape>
-					 navigator.serviceWorker
-				</code></pre>
-			</section>
+					 if ('serviceWorker' in navigator) {
+				     navigator.serviceWorker.register(${service-worker-path})
+					 }
+        </code></pre>
+        <p>Service worker</p>
+				<pre><code data-trim data-noescape>
+          self.addEventListener('install', function (event) {
+            event.waitUntil(
+              ...
+            )
+          })
+
+          self.addEventListener('fetch', function (event) {
+            event.respondWith(
+              ...
+            )
+          })
+        </code></pre>
+      </section>
+      <section>
+        <h4>DEMO 2</h4>
+        <a href="https://davidguan.me/demo/pre-fetch/page1/" target="_blank">davidguan.me/demo/pre-fetch/page1</a>
+      </section>
+      <section>
+        <h4>And Much More</h4>
+      </section>
+      <section data-markdown>
+        <textarea data-template>
+          [serviceworke.rs](https://serviceworke.rs/)
+          ![](./images/more0.png)
+        </textarea>
+      </section>
+      <section data-markdown>
+        <textarea data-template>
+          [developers.google.com/web/fundamentals/primers/service-workers](https://developers.google.com/web/fundamentals/primers/service-workers/)
+          ![](./images/more1.png)
+        </textarea>
+      </section>
 		</div>
 	</div>
 	<script src="./js/reveal.js"></script>
